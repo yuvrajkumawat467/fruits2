@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits & Vegetables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="script.js"></script>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Fruits & Veggies</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fruits">Fruits</a></li>
+                <li><a href="#vegetables">Vegetables</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="banner">
+            <h1>Fresh & Organic Fruits & Vegetables</h1>
+            <p>Eat healthy, stay healthy!</p>
+        </section>
+
+        <!-- Fruits Section -->
+        <section id="fruits" class="category">
+            <h2>Our Fresh Fruits</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="apple.jpg" alt="Apple">
+                    <p>Apple</p>
+                </div>
+                <div class="item">
+                    <img src="banana.jpg" alt="Banana">
+                    <p>Banana</p>
+                </div>
+                <div class="item">
+                    <img src="orange.jpg" alt="Orange">
+                    <p>Orange</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vegetables Section -->
+        <section id="vegetables" class="category">
+            <h2>Our Fresh Vegetables</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="carrot.jpg" alt="Carrot">
+                    <p>Carrot</p>
+                </div>
+                <div class="item">
+                    <img src="broccoli.jpg" alt="Broccoli">
+                    <p>Broccoli</p>
+                </div>
+                <div class="item">
+                    <img src="tomato.jpg" alt="Tomato">
+                    <p>Tomato</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>Contact us: info@fruitsveggies.com | Phone: +123 456 7890</p>
+        <p>&copy; 2025 Fruits & Vegetables. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+<header>
+    <div class="logo">Fruits & Veggies</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#fruits">Fruits</a></li>
+            <li><a href="#vegetables">Vegetables</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="search">
+    <input type="text" id="searchBox" placeholder="Search fruits or vegetables...">
+</section>
+<footer id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>&copy; 2025 Fruits & Vegetables. All Rights Reserved.</p>
+</footer>
+<section class="slider">
+    <div class="slides">
+        <img src="fruit1.jpg" alt="Fresh Fruits">
+        <img src="vegetable1.jpg" alt="Fresh Vegetables">
+        <img src="fruit2.jpg" alt="More Fruits">
+    </div>
+</section>
+<script>
+    let index = 0;
+    function showSlides() {
+        let slides = document.querySelectorAll(".slides img");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        index++;
+        if (index > slides.length) { index = 1 }
+        slides[index - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    showSlides();
+</script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
+<section id="fruits" class="category">
+    <h2>Our Fresh Fruits</h2>
+    <div class="items">
+        <div class="item">
+            <img src="apple.jpg" alt="Apple">
+            <p>Apple</p>
+        </div>
+        <div class="item">
+            <img src="banana.jpg" alt="Banana">
+            <p>Banana</p>
+        </div>
+        <div class="item">
+            <img src="orange.jpg" alt="Orange">
+            <p>Orange</p>
+        </div>
+        <div class="item">
+            <img src="grapes.jpg" alt="Grapes">
+            <p>Grapes</p>
+        </div>
+        <div class="item">
+            <img src="mango.jpg" alt="Mango">
+            <p>Mango</p>
+        </div>
+        <div class="item">
+            <img src="watermelon.jpg" alt="Watermelon">
+            <p>Watermelon</p>
+        </div>
+        <div class="item">
+            <img src="strawberry.jpg" alt="Strawberry">
+            <p>Strawberry</p>
+        </div>
+        <div class="item">
+            <img src="pineapple.jpg" alt="Pineapple">
+            <p>Pineapple</p>
+        </div>
+    </div>
+</section>
+<section id="vegetables" class="category">
+    <h2>Our Fresh Vegetables</h2>
+    <div class="items">
+        <div class="item">
+            <img src="carrot.jpg" alt="Carrot">
+            <p>Carrot</p>
+        </div>
+        <div class="item">
+            <img src="broccoli.jpg" alt="Broccoli">
+            <p>Broccoli</p>
+        </div>
+        <div class="item">
+            <img src="tomato.jpg" alt="Tomato">
+            <p>Tomato</p>
+        </div>
+        <div class="item">
+            <img src="cucumber.jpg" alt="Cucumber">
+            <p>Cucumber</p>
+        </div>
+        <div class="item">
+            <img src="spinach.jpg" alt="Spinach">
+            <p>Spinach</p>
+        </div>
+        <div class="item">
+            <img src="onion.jpg" alt="Onion">
+            <p>Onion</p>
+        </div>
+        <div class="item">
+            <img src="potato.jpg" alt="Potato">
+            <p>Potato</p>
+        </div>
+        <div class="item">
+            <img src="bellpepper.jpg" alt="Bell Pepper">
+            <p>Bell Pepper</p>
+        </div>
+    </div>
+</section>
+<section id="fruits" class="category">
+    <h2>Our Fresh Fruits</h2>
+    <div class="items">
+        <div class="item">
+            <img src="apple.jpg" alt="Apple">
+            <h3>Apple</h3>
+            <p><strong>Benefits:</strong> Rich in fiber, good for heart, boosts immunity.</p>
+            <p><strong>Negative Impact:</strong> Excess consumption may cause blood sugar spikes.</p>
+        </div>
+        <div class="item">
+            <img src="banana.jpg" alt="Banana">
+            <h3>Banana</h3>
+            <p><strong>Benefits:</strong> High in potassium, good for digestion and energy.</p>
+            <p><strong>Negative Impact:</strong> May cause constipation if eaten in excess.</p>
+        </div>
+        <div class="item">
+            <img src="orange.jpg" alt="Orange">
+            <h3>Orange</h3>
+            <p><strong>Benefits:</strong> Rich in Vitamin C, boosts immunity.</p>
+            <p><strong>Negative Impact:</strong> High acidity may cause acid reflux.</p>
+        </div>
+        <div class="item">
+            <img src="grapes.jpg" alt="Grapes">
+            <h3>Grapes</h3>
+            <p><strong>Benefits:</strong> Good for heart, rich in antioxidants.</p>
+            <p><strong>Negative Impact:</strong> High sugar content may not be good for diabetics.</p>
+        </div>
+        <div class="item">
+            <img src="mango.jpg" alt="Mango">
+            <h3>Mango</h3>
+            <p><strong>Benefits:</strong> Improves digestion, rich in Vitamin A.</p>
+            <p><strong>Negative Impact:</strong> Excess may lead to weight gain.</p>
+        </div>
+        <div class="item">
+            <img src="watermelon.jpg" alt="Watermelon">
+            <h3>Watermelon</h3>
+            <p><strong>Benefits:</strong> Hydrating, good for skin and heart.</p>
+            <p><strong>Negative Impact:</strong> Overeating can cause bloating.</p>
+        </div>
+    </div>
+</section>
+<section id="vegetables" class="category">
+    <h2>Our Fresh Vegetables</h2>
+    <div class="items">
+        <div class="item">
+            <img src="carrot.jpg" alt="Carrot">
+            <h3>Carrot</h3>
+            <p><strong>Benefits:</strong> Good for eyesight, rich in Vitamin A.</p>
+            <p><strong>Negative Impact:</strong> Excess may turn skin slightly orange (beta-carotene effect).</p>
+        </div>
+        <div class="item">
+            <img src="broccoli.jpg" alt="Broccoli">
+            <h3>Broccoli</h3>
+            <p><strong>Benefits:</strong> Rich in fiber, supports digestion.</p>
+            <p><strong>Negative Impact:</strong> Can cause bloating in some people.</p>
+        </div>
+        <div class="item">
+            <img src="tomato.jpg" alt="Tomato">
+            <h3>Tomato</h3>
+            <p><strong>Benefits:</strong> High in antioxidants, good for skin.</p>
+            <p><strong>Negative Impact:</strong> Excess acidity may cause stomach irritation.</p>
+        </div>
+        <div class="item">
+            <img src="cucumber.jpg" alt="Cucumber">
+            <h3>Cucumber</h3>
+            <p><strong>Benefits:</strong> Keeps body hydrated, good for digestion.</p>
+            <p><strong>Negative Impact:</strong> Overeating may lead to dehydration due to diuretic effect.</p>
+        </div>
+        <div class="item">
+            <img src="spinach.jpg" alt="Spinach">
+            <h3>Spinach</h3>
+            <p><strong>Benefits:</strong> High in iron, great for blood health.</p>
+            <p><strong>Negative Impact:</strong> May cause kidney stones if eaten excessively.</p>
+        </div>
+        <div class="item">
+            <img src="onion.jpg" alt="Onion">
+            <h3>Onion</h3>
+            <p><strong>Benefits:</strong> Good for immunity, contains antibacterial properties.</p>
+            <p><strong>Negative Impact:</strong> Can cause bad breath or stomach irritation.</p>
+        </div>
+    </div>
+</section>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    </script>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for fruits or vegetables..." onkeyup="searchItems()">
+    </div>
+    <script>
+        function searchItems() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                let itemName = item.innerText.toLowerCase();
+                item.style.display = itemName.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+    <div class="item">
+        <img src="apple.jpg" alt="Apple">
+        <h3>Apple</h3>
+        <p><strong>Benefits:</strong> Rich in fiber, good for heart.</p>
+        <p><strong>Negative Impact:</strong> May cause blood sugar spikes.</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Best quality fruits and vegetables! Super fresh and organic." - <strong>Rohit Sharma</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Quick delivery and amazing customer service. Highly recommended!" - <strong>Priya Verma</strong></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+    <script>
+        const toggleButton = document.getElementById("darkModeToggle");
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+    <body>
+        <h1>Fruits and Vegetables</h1>
+        <img src="images/fruits.webp" alt="Fresh Fruits" id="fruitsImage" />
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">🍎 What are the health benefits of eating fruits? ➕</button>
+                <div class="faq-answer">
+                    <p>Fruits are rich in vitamins, minerals, and antioxidants. They help improve digestion, boost immunity, and provide essential nutrients for overall health.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🥦 Why are vegetables important in our diet? ➕</button>
+                <div class="faq-answer">
+                    <p>Vegetables provide fiber, vitamins, and minerals that support a healthy digestive system, reduce the risk of chronic diseases, and promote overall well-being.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🍌 Can eating too many fruits be harmful? ➕</button>
+                <div class="faq-answer">
+                    <p>While fruits are healthy, excessive consumption can lead to high sugar intake, which may cause blood sugar spikes. It is best to eat them in moderation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🥕 Which vegetables are best for weight loss? ➕</button>
+                <div class="faq-answer">
+                    <p>Leafy greens, carrots, cucumbers, and bell peppers are low in calories and high in fiber, making them excellent choices for weight loss.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const answer = button.nextElementSibling;
+    
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    button.textContent = button.textContent.replace("➖", "➕");
+                } else {
+                    answer.style.display = "block";
+                    button.textContent = button.textContent.replace("➕", "➖");
+                }
+            });
+        });
+    </script>
+    
